@@ -1,4 +1,4 @@
-#Nama Proyek: Chatime
+Nama Proyek: Chatime
 
 Deskripsi:
 Proyek ini merupakan sebuah website chatting yang dibangun menggunakan metode pengembangan MERN (MongoDB, Express, React, Node) dan menerapkan WebSocket dengan library Socket.IO. Website ini memungkinkan pengguna untuk melakukan registrasi, login, dan berkomunikasi melalui fitur chat.
