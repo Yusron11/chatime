@@ -5,13 +5,13 @@ Proyek ini merupakan sebuah website chatting yang dibangun menggunakan metode pe
 
 Teknologi yang Digunakan:
 
-MongoDB
-Express
-React
-Node.js
-Socket.IO
-Fitur:
+- MongoDB
+- Express
+- React
+- Node.js
+- Socket.IO
 
+Fitur:
 Registrasi: Pengguna dapat mendaftar untuk membuat akun baru.
 Login: Pengguna dapat masuk ke akun mereka yang sudah terdaftar.
 Chat: Pengguna dapat mengirim dan menerima pesan kepada pengguna lain.
