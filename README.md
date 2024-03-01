@@ -17,4 +17,4 @@ Fitur:
 - Chat: Pengguna dapat mengirim dan menerima pesan kepada pengguna lain.
 
 Catatan Pengembangan:
-Meskipun fitur chatting belum sepenuhnya real-time, pengembangan proyek ini terus dilakukan untuk meningkatkan responsivitasnya.
+Fitur Chatting belum real-time
