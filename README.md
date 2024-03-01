@@ -12,9 +12,9 @@ Teknologi yang Digunakan:
 - Socket.IO
 
 Fitur:
-Registrasi: Pengguna dapat mendaftar untuk membuat akun baru.
-Login: Pengguna dapat masuk ke akun mereka yang sudah terdaftar.
-Chat: Pengguna dapat mengirim dan menerima pesan kepada pengguna lain.
+# Registrasi: Pengguna dapat mendaftar untuk membuat akun baru.
+# Login: Pengguna dapat masuk ke akun mereka yang sudah terdaftar.
+# Chat: Pengguna dapat mengirim dan menerima pesan kepada pengguna lain.
 
 Catatan Pengembangan:
 Meskipun fitur chatting belum sepenuhnya real-time, pengembangan proyek ini terus dilakukan untuk meningkatkan responsivitasnya.
