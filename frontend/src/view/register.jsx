@@ -13,11 +13,11 @@ function Register() {
         confirmPassword:"",
     });
 
-    // useEffect(() => {
-    //     if(localStorage.getItem('chatime-user')) {
-    //       navigate('/')
-    //     }
-    //   }, []);
+    useEffect(() => {
+        if(localStorage.getItem('chatime-user')) {
+          navigate('/')
+        }
+      }, []);
 
     const handleSubmit = async (event) => {
         event.preventDefault();

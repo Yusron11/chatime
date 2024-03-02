@@ -36,16 +36,14 @@ export default function ChatContainer({ currentChat, currentUser, socket }) {
             message: msg,
         });
         socket.current.emit("send-msg", {
-            to: currentUser._id,
-            from: currentChat._id,
+            to: currentChat._id,
+            from: currentUser._id,
             message: msg,
         });
         const msgs = [...messages, { fromSelf: true, message: msg }];
         setMessages(msgs);
-        setArrivalMessage(null); 
     };
     
-
     useEffect(() => {
         if (socket.current) {
             socket.current.on("msg-recieve", (msg) => {
@@ -54,14 +52,16 @@ export default function ChatContainer({ currentChat, currentUser, socket }) {
         }
     }, [socket]);
     
-
     useEffect(() => {
-        arrivalMessage && setArrivalMessage ((prev) => [...prev, arrivalMessage]);
+        if (arrivalMessage) {
+            setMessages((prevMessages) => [...prevMessages, arrivalMessage]);
+            scrollRef.current?.scrollIntoView({ behavior: "smooth" });
+        }
     }, [arrivalMessage]);
 
     useEffect(() => {
         scrollRef.current?.scrollIntoView({ behavior: "smooth" });
-    }, [messages]);    
+    }, [messages]);
 
     return (
         <>
@@ -84,15 +84,16 @@ export default function ChatContainer({ currentChat, currentUser, socket }) {
                 <div className="chat-messages">
                     {messages.map((message) => {
                     return (
-                        <div ref={scrollRef} key={uuidv4()}>
+                        <div key={uuidv4()}>
                             <div className={`message ${message.fromSelf ? "sended" : "recieved"}`}>
-                                <div className="content ">
+                                <div className="content">
                                 <p>{message.message}</p>
                                 </div>
                             </div>
                         </div>
                     );
                     })}
+                    <div ref={scrollRef}></div>
                 </div>
                 <ChatInput handleSendMsg={handleSendMsg} />
                 </Container>

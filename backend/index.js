@@ -30,7 +30,7 @@ const io = socket(server, {
         origin:"http://localhost:3000",
         Credential: true,
     }
-})
+});
 
 global.onlineusers = new Map();
 
