@@ -20,6 +20,14 @@ const userSchema = new mongoose.Schema({
         required: true,
         min: 8,
     },
+    isAvatarImageSet: {
+        type: Boolean,
+        default: true,
+      },
+      avatarImage: {
+        type: String,
+        default: "https://api.multiavatar.com/949",
+      },
 });
 
 module.exports = mongoose.model("Users", userSchema);

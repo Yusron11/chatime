@@ -33,7 +33,7 @@ function Register() {
             }
             if (data.status === true) {
                 localStorage.setItem("chatime-user", JSON.stringify(data.user));
-                navigate("/");
+                navigate("/login");
             }
         }
     };
