@@ -16,5 +16,4 @@ Fitur:
 - Login: Pengguna dapat masuk ke akun mereka yang sudah terdaftar.
 - Chat: Pengguna dapat mengirim dan menerima pesan kepada pengguna lain.
 
-Catatan Pengembangan:
-Fitur Chatting belum real-time
+
