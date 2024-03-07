@@ -41,6 +41,7 @@ export default function ChatContainer({ currentChat, currentUser, socket }) {
             message: msg,
         });
         const msgs = [...messages, { fromSelf: true, message: msg }];
+        console.log(msgs);
         setMessages(msgs);
     };
     
@@ -87,7 +88,7 @@ export default function ChatContainer({ currentChat, currentUser, socket }) {
                         <div key={uuidv4()}>
                             <div className={`message ${message.fromSelf ? "sended" : "recieved"}`}>
                                 <div className="content">
-                                <p>{message.message}</p>
+                                  <p>{message.message}</p>
                                 </div>
                             </div>
                         </div>

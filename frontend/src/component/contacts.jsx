@@ -5,7 +5,6 @@ import Avatar from "../assets/user.png"
 
 export default function Contacts({ contacts, changeChat }) {
   const [currentUserName, setCurrentUserName] = useState(undefined);
-  const [currentUserImage, setCurrentUserImage] = useState(undefined);
   const [currentSelected, setCurrentSelected] = useState(undefined);
 
   useEffect(() => {
@@ -13,7 +12,6 @@ export default function Contacts({ contacts, changeChat }) {
       try {
         const data = JSON.parse(localStorage.getItem("chatime-user"));
         setCurrentUserName(data.username);
-        setCurrentUserImage(data.avatarImage);
       } catch (error) {
         console.error("Error fetching user data:", error);
       }
@@ -29,7 +27,6 @@ export default function Contacts({ contacts, changeChat }) {
 
   return (
     <>
-      {currentUserImage && (
         <Container>
           <div className="brand">
             <img src={Logo} alt="logo" />
@@ -62,7 +59,6 @@ export default function Contacts({ contacts, changeChat }) {
             </div>
           </div>
         </Container>
-      )}
     </>
   );
 }
